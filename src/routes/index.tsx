@@ -1,29 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PreLoader } from "@/components/PreLoader";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Services } from "@/components/Services";
+import { Contact } from "@/components/Contact";
+import { Cursor } from "@/components/Cursor";
+import { StickyCTA } from "@/components/StickyCTA";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Loopin Marketing — We Build Brands for the Modern Internet" },
+      { name: "description", content: "Loopin Marketing helps brands stand out through sharp advertising, creative storytelling, and growth strategies. Meta Ads, Google Ads, SEO, Branding & more." },
+      { property: "og:title", content: "Loopin Marketing — We Build Brands for the Modern Internet" },
+      { property: "og:description", content: "Sharp advertising, creative storytelling, and strategies built for real growth." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative noise">
+      <PreLoader />
+      <Cursor />
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Contact />
+      </main>
+      <StickyCTA />
     </div>
   );
 }
