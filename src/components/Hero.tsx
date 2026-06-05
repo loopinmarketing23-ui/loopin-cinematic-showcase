@@ -146,9 +146,9 @@ export function Hero() {
           className="mt-12 flex flex-col items-center gap-4"
         >
           <MagneticButton onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
-            Lets Build Your Brand
+            Let's Build Your Brand
           </MagneticButton>
-          <span className="text-xs text-white/40 mt-2">Lets make your brand impossible to ignore.</span>
+          <span className="text-xs text-white/40 mt-2">Let's make your brand impossible to ignore.</span>
         </motion.div>
       </motion.div>
 

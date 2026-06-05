@@ -73,7 +73,7 @@ export function Navbar() {
             onClick={() => scrollTo("contact")}
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-loopin text-black text-sm font-semibold hover:scale-105 transition-transform"
           >
-            Lets Talk <span aria-hidden>→</span>
+            Let's Talk <span aria-hidden>→</span>
           </button>
 
           <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="Menu">
@@ -99,7 +99,7 @@ export function Navbar() {
                 </li>
               ))}
               <button onClick={() => scrollTo("contact")} className="mt-4 px-5 py-3 rounded-full bg-loopin text-black font-semibold">
-                Lets Talk →
+                Let's Talk →
               </button>
             </ul>
           </motion.div>
