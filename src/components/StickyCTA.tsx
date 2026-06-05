@@ -12,7 +12,7 @@ export function StickyCTA() {
       className="fixed bottom-6 right-6 z-40 hidden md:inline-flex items-center gap-2 px-5 py-3 rounded-full bg-loopin text-black text-sm font-semibold shadow-[0_0_30px_rgba(250,204,21,0.5)] hover:scale-105 transition-transform"
     >
       <span className="w-2 h-2 rounded-full bg-black animate-pulse" />
-      Let's Build Your Brand →
+      Lets Build Your Brand →
     </motion.button>
   );
 }

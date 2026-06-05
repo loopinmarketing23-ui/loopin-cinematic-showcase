@@ -11,9 +11,9 @@ import { StickyCTA } from "@/components/StickyCTA";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Loopin Marketing — We Build Brands for the Modern Internet" },
+      { title: "Loopin Marketing - We Build Brands for the Modern Internet" },
       { name: "description", content: "Loopin Marketing helps brands stand out through sharp advertising, creative storytelling, and growth strategies. Meta Ads, Google Ads, SEO, Branding & more." },
-      { property: "og:title", content: "Loopin Marketing — We Build Brands for the Modern Internet" },
+      { property: "og:title", content: "Loopin Marketing - We Build Brands for the Modern Internet" },
       { property: "og:description", content: "Sharp advertising, creative storytelling, and strategies built for real growth." },
     ],
   }),
