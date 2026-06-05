@@ -166,6 +166,26 @@ export function Contact() {
                 <span className="text-3xl text-loopin transition-transform group-hover:translate-x-1">→</span>
               </div>
             </a>
+
+            <div className="glass rounded-3xl p-8">
+              <div className="text-xs uppercase tracking-[0.3em] text-loopin mb-5">Follow Us</div>
+              <div className="flex items-center gap-4">
+                {socials.map(s => (
+                  <a
+                    key={s.name}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={s.name}
+                    className="group relative w-12 h-12 rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-black hover:bg-loopin hover:border-loopin transition-all duration-300"
+                  >
+                    <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" aria-hidden="true">
+                      <path d={s.icon} />
+                    </svg>
+                  </a>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
 
