@@ -7,7 +7,7 @@ const whyPoints = [
   { title: "Creative with Purpose", body: "Every post, ad, and piece of content we create is designed to do one thing: make the right person stop, pay attention, and take action." },
   { title: "Results That Matter", body: "We measure what actually moves your business - visibility, leads, conversions, and customer growth. Not vanity metrics." },
   { title: "End-to-End Marketing Solutions", body: "From social media and advertising to branding and websites, we provide everything your business needs under one roof." },
-  { title: "A Partner, Not Just a Service Provider", body: "We treat your business goals as our own. Your growth is our success, and were invested in helping you get there." },
+  { title: "A Partner, Not Just a Service Provider", body: "We treat your business goals as our own. Your growth is our success, and we're invested in helping you get there." },
   { title: "Built for Businesses That Want to Scale", body: "Whether you're a startup finding your footing or an established business looking to grow, our strategies are built to support your next stage of growth." },
   { title: "Future-Focused Vision", body: "When you work with Loopin, you're partnering with a brand that believes in building long-term value, strong relationships, and lasting impact." },
 ];
@@ -50,7 +50,7 @@ export function About() {
             <RevealText>In a world where attention is limited and competition is everywhere, businesses need more than just social media posts and advertisements. They need a strategy that helps them stand out, connect with the right audience, and create lasting growth.</RevealText>
             <RevealText>That's why Loopin was started by two people who saw too many great businesses stay invisible, not because they lacked quality, but because they lacked the right strategy to be found.</RevealText>
             <RevealText>We help businesses build strong digital identities through strategy, creative storytelling, and performance marketing. From startups taking their first steps online to established businesses ready to scale, our goal is simple: help brands grow with confidence.</RevealText>
-            <RevealText>Loopin started as a marketing agency. But our ambition doesn't stop there. Were building toward something bigger - one business, one partnership, one industry at a time.</RevealText>
+            <RevealText>Loopin started as a marketing agency. But our ambition doesn't stop there. We're building toward something bigger - one business, one partnership, one industry at a time.</RevealText>
           </div>
 
           <div className="md:col-span-5 md:sticky md:top-32 self-start space-y-5">

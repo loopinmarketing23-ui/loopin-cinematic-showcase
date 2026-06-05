@@ -158,7 +158,7 @@ export function Contact() {
           className="mt-32 text-center max-w-4xl mx-auto"
         >
           <h3 className="text-4xl md:text-6xl font-light">Ready to <span className="italic font-serif text-shimmer">Grow</span> Your Business?</h3>
-          <p className="mt-6 text-white/60 text-lg">Whether you need more visibility, more leads, or a stronger brand presence, were here to help.</p>
+          <p className="mt-6 text-white/60 text-lg">Whether you need more visibility, more leads, or a stronger brand presence, we're here to help.</p>
           <p className="mt-4 text-xl md:text-2xl italic font-serif text-white/90">"Your next stage of growth starts with one conversation. Let's have it."</p>
           <button
             onClick={() => document.querySelector<HTMLInputElement>(input[type="text"])?.focus()}
