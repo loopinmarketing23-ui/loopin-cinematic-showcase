@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useState } from "react";
+import loopinLogo from "@/assets/loopin-logo.png.asset.json";
 
 const links = [
   { label: "Home", id: "home" },
@@ -46,10 +47,11 @@ export function Navbar() {
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 h-20">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3 group">
-            <div className="relative w-9 h-9">
-              <div className="absolute inset-0 rounded-full border-2 border-loopin group-hover:rotate-180 transition-transform duration-700" />
-              <div className="absolute inset-2 rounded-full bg-loopin" />
-            </div>
+            <img
+              src={loopinLogo.url}
+              alt="Loopin Marketing"
+              className="h-10 w-auto transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(250,204,21,0.35)]"
+            />
             <span className="text-xl font-medium tracking-tight">Loopin<span className="text-loopin">.</span></span>
           </button>
 

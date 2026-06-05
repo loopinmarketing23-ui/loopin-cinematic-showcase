@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
+import loopinLogo from "@/assets/loopin-logo.png.asset.json";
 
 export function PreLoader() {
   const [done, setDone] = useState(false);
@@ -30,27 +31,18 @@ export function PreLoader() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(250,204,21,0.18),transparent_60%)]" />
 
           <motion.div
-            initial={{ scale: 0.4, opacity: 0 }}
+            initial={{ scale: 0.6, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative z-10 flex items-center gap-4 mb-12"
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="relative z-10 flex flex-col items-center mb-12"
           >
-            <motion.div
-              className="w-16 h-16 rounded-full border-2 border-loopin relative"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
-            >
-              <div className="absolute inset-2 rounded-full bg-loopin animate-pulse-glow" />
-            </motion.div>
-            <div className="overflow-hidden">
-              <motion.span
-                initial={{ y: 60 }} animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="block text-5xl md:text-7xl font-light tracking-tight text-shimmer"
-              >
-                Loopin
-              </motion.span>
-            </div>
+            <motion.img
+              src={loopinLogo.url}
+              alt="Loopin Marketing"
+              className="w-48 md:w-64 h-auto drop-shadow-[0_0_40px_rgba(250,204,21,0.45)]"
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            />
           </motion.div>
 
           <motion.div

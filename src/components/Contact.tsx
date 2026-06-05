@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SectionTitle } from "./SectionTitle";
 
 const serviceOptions = [
+  "Consultation",
   "Social Media Marketing", "Google Ads", "Meta Ads", "Spotify Ads",
   "LinkedIn Marketing", "Branding", "Content Creation", "Website Development",
   "SEO", "Ad Commercials",
@@ -61,7 +62,7 @@ export function Contact() {
 
   const socials = [
     { name: "Instagram", href: "https://www.instagram.com/loopin.marketing?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", icon: "M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 2A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5zM17.75 6a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 17.75 6z" },
-    { name: "Facebook", href: "https://www.facebook.com/loopin.marketing", icon: "M13 22v-8h3l1-4h-4V7.5C13 6.4 13.4 5.5 15 5.5h2V2.2C16.5 2.1 15.3 2 14 2c-3 0-5 1.8-5 5v3H6v4h3v8z" },
+    { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61587780509536", icon: "M13 22v-8h3l1-4h-4V7.5C13 6.4 13.4 5.5 15 5.5h2V2.2C16.5 2.1 15.3 2 14 2c-3 0-5 1.8-5 5v3H6v4h3v8z" },
     { name: "LinkedIn", href: "https://www.linkedin.com/company/loopin-marketing", icon: "M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.06A4.17 4.17 0 0 1 17.6 8.7c4.07 0 4.82 2.68 4.82 6.16V21h-4v-5.3c0-1.26-.02-2.88-1.76-2.88-1.76 0-2.03 1.37-2.03 2.79V21h-4z" },
   ];
 
