@@ -137,7 +137,7 @@ export function Hero() {
           transition={{ delay: 3.2, duration: 0.8 }}
           className="mt-10 max-w-2xl mx-auto text-base md:text-lg text-white/60 leading-relaxed"
         >
-          "Your customers are online. Your brand should be impossible to miss when they get there."
+          Your customers are online. Your brand should be impossible to miss when they get there.
         </motion.p>
 
         <motion.div
