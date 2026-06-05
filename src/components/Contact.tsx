@@ -141,7 +141,7 @@ export function Contact() {
               <ul className="space-y-6">
                 {[
                   { label: "Phone", value: "+91 XXXXX XXXXX" },
-                  { label: "Email", value: "hello@loopinmarketing.com" },
+                  { label: "Email", value: "loopinmarketing23@gmail.com" },
                   { label: "Location", value: "Chennai, Tamil Nadu, India" },
                   { label: "Business Hours", value: "Monday – Saturday\n9:00 AM – 6:00 PM" },
                 ].map(item => (
