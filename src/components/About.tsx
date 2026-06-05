@@ -127,7 +127,7 @@ export function About() {
             className="mt-24 text-center"
           >
             <p className="text-2xl md:text-4xl font-light italic font-serif text-white/90 max-w-3xl mx-auto">
-              "If you're ready to grow, were ready to build with you."
+              If you're ready to grow, we're ready to build with you.
             </p>
             <div className="mt-10 space-y-3 text-lg text-white/60">
               <p>Your business deserves more than visibility.</p>
