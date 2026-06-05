@@ -5,7 +5,7 @@ import { SectionTitle } from "./SectionTitle";
 const services = [
   { name: "Social Media Marketing", body: "Build a consistent and engaging presence across platforms with content and strategies designed to connect with your audience." },
   { name: "Meta Ads", body: "Reach potential customers through highly targeted Facebook and Instagram advertising campaigns that drive leads, sales, and brand awareness." },
-  { name: "Google Ads", body: "Capture high-intent customers exactly when theyre searching for products or services like yours." },
+  { name: "Google Ads", body: "Capture high-intent customers exactly when they're searching for products or services like yours." },
   { name: "Search Engine Optimization (SEO)", body: "Improve your visibility on search engines and attract organic traffic that contributes to long-term growth." },
   { name: "Branding", body: "Create a memorable identity that helps your business stand out, build trust, and leave a lasting impression." },
   { name: "Content Creation", body: "From social media content and ad creatives to videos and brand storytelling, we create content that captures attention and drives action." },
@@ -87,7 +87,7 @@ export function Services() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(250,204,21,0.15),transparent_70%)]" />
           <div className="relative">
             <h3 className="text-3xl md:text-5xl font-light">Need a <span className="italic font-serif text-shimmer">customized solution?</span></h3>
-            <p className="mt-5 text-white/60 max-w-2xl mx-auto">Whether youre looking for a single service or a complete growth strategy, well create a plan tailored to your business goals.</p>
+            <p className="mt-5 text-white/60 max-w-2xl mx-auto">Whether you're looking for a single service or a complete growth strategy, we'll create a plan tailored to your business goals.</p>
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               className="mt-8 inline-flex items-center gap-3 px-8 py-4 rounded-full bg-loopin text-black font-semibold hover:scale-105 transition-transform animate-pulse-glow"

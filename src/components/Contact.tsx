@@ -59,14 +59,14 @@ export function Contact() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-10">
         <SectionTitle
           eyebrow="Contact Us"
-          title={<>Lets Build<br /><span className="italic font-serif text-shimmer">Whats Next</span></>}
-          subtitle="Whether youre looking to grow your brand, generate more leads, improve your online presence, or explore a new marketing strategy, wed love to hear from you."
+          title={<>Let's Build<br /><span className="italic font-serif text-shimmer">What's Next</span></>}
+          subtitle="Whether you're looking to grow your brand, generate more leads, improve your online presence, or explore a new marketing strategy, we'd love to hear from you."
         />
         <motion.p
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
           className="mt-8 text-xl md:text-2xl italic font-serif text-white/80"
         >
-          "Lets Turn Your Vision Into Reality"
+          Let's Turn Your Vision Into Reality
         </motion.p>
 
         <div className="grid lg:grid-cols-5 gap-10 mt-20">
@@ -158,10 +158,10 @@ export function Contact() {
           className="mt-32 text-center max-w-4xl mx-auto"
         >
           <h3 className="text-4xl md:text-6xl font-light">Ready to <span className="italic font-serif text-shimmer">Grow</span> Your Business?</h3>
-          <p className="mt-6 text-white/60 text-lg">Whether you need more visibility, more leads, or a stronger brand presence, were here to help.</p>
-          <p className="mt-4 text-xl md:text-2xl italic font-serif text-white/90">"Your next stage of growth starts with one conversation. Lets have it."</p>
+          <p className="mt-6 text-white/60 text-lg">Whether you need more visibility, more leads, or a stronger brand presence, we're here to help.</p>
+          <p className="mt-4 text-xl md:text-2xl italic font-serif text-white/90">Your next stage of growth starts with one conversation. Let's have it.</p>
           <button
-            onClick={() => document.querySelector<HTMLInputElement>(input[type="text"])?.focus()}
+            onClick={() => document.querySelector<HTMLInputElement>('input[type="text"]')?.focus()}
             className="mt-10 inline-flex items-center gap-3 px-10 py-5 rounded-full bg-loopin text-black font-semibold hover:scale-105 transition-transform animate-pulse-glow"
           >
             Get in Touch <span>→</span>

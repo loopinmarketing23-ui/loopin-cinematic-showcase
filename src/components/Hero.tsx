@@ -137,7 +137,7 @@ export function Hero() {
           transition={{ delay: 3.2, duration: 0.8 }}
           className="mt-10 max-w-2xl mx-auto text-base md:text-lg text-white/60 leading-relaxed"
         >
-          "Your customers are online. Your brand should be impossible to miss when they get there."
+          Your customers are online. Your brand should be impossible to miss when they get there.
         </motion.p>
 
         <motion.div
@@ -146,9 +146,9 @@ export function Hero() {
           className="mt-12 flex flex-col items-center gap-4"
         >
           <MagneticButton onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
-            Lets Build Your Brand
+            Let's Build Your Brand
           </MagneticButton>
-          <span className="text-xs text-white/40 mt-2">Lets make your brand impossible to ignore.</span>
+          <span className="text-xs text-white/40 mt-2">Let's make your brand impossible to ignore.</span>
         </motion.div>
       </motion.div>
 
