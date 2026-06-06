@@ -8,6 +8,7 @@ import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
 import { Cursor } from "@/components/Cursor";
 import { StickyCTA } from "@/components/StickyCTA";
+import loopinLogo from "@/assets/loopin-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -16,6 +17,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Loopin Marketing helps brands stand out through sharp advertising, creative storytelling, and growth strategies. Meta Ads, Google Ads, SEO, Branding & more." },
       { property: "og:title", content: "Loopin Marketing - We Build Brands for the Modern Internet" },
       { property: "og:description", content: "Sharp advertising, creative storytelling, and strategies built for real growth." },
+    ],
+    links: [
+      { rel: "preload", as: "image", href: loopinLogo.url, fetchpriority: "high" },
     ],
   }),
   component: Index,
