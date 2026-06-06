@@ -3,25 +3,31 @@ import { useEffect, useState } from "react";
 import loopinLogo from "@/assets/loopin-logo.png.asset.json";
 
 export function PreLoader({ onDone }: { onDone?: () => void }) {
-  const [done, setDone] = useState(false);
-  const [pct, setPct] = useState(0);
+  const seen = typeof window !== "undefined" && sessionStorage.getItem("loopin_seen") === "1";
+  const [done, setDone] = useState(seen);
+  const [pct, setPct] = useState(seen ? 100 : 0);
 
   useEffect(() => {
+    if (seen) {
+      onDone?.();
+      return;
+    }
     let p = 0;
     const id = setInterval(() => {
-      p += Math.random() * 18 + 6;
+      p += Math.random() * 28 + 14;
       if (p >= 100) {
         p = 100;
         clearInterval(id);
         setTimeout(() => {
           onDone?.();
           setDone(true);
-        }, 600);
+          try { sessionStorage.setItem("loopin_seen", "1"); } catch {}
+        }, 250);
       }
       setPct(Math.floor(p));
-    }, 140);
+    }, 70);
     return () => clearInterval(id);
-  }, [onDone]);
+  }, [onDone, seen]);
 
   return (
     <AnimatePresence>
@@ -29,7 +35,7 @@ export function PreLoader({ onDone }: { onDone?: () => void }) {
         <motion.div
           className="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center overflow-hidden"
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
+          transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
         >
           <motion.div
             className="absolute inset-0 grid-bg opacity-40"
