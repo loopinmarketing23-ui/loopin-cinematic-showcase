@@ -134,8 +134,9 @@ export function Hero({ ready = false }: { ready?: boolean }) {
         </h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3.2, duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-10 max-w-2xl mx-auto text-base md:text-lg text-white/60 leading-relaxed"
         >
           Your customers are online. Your brand should be impossible to miss when they get there.
