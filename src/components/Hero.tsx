@@ -124,7 +124,7 @@ export function Hero({ ready = false }: { ready?: boolean }) {
         <h1 className="text-[14vw] md:text-[8vw] leading-[0.95] font-light tracking-tight">
           {["We Build Brands", "for the Modern", "Internet"].map((line, i) => (
             <span key={i} className="block overflow-hidden">
-              <motion.span variants={reveal} initial="hidden" animate="show" custom={i} className="block">
+              <motion.span variants={reveal} initial="hidden" animate={ready ? "show" : "hidden"} custom={i} className="block">
                 {i === 2 ? (
                   <span className="italic font-serif text-shimmer">{line}</span>
                 ) : line}
