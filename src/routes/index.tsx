@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { PreLoader } from "@/components/PreLoader";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
@@ -21,13 +22,14 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [ready, setReady] = useState(false);
   return (
     <div className="relative noise">
-      <PreLoader />
+      <PreLoader onDone={() => setReady(true)} />
       <Cursor />
       <Navbar />
       <main>
-        <Hero />
+        <Hero ready={ready} />
         <About />
         <Services />
         <Contact />
