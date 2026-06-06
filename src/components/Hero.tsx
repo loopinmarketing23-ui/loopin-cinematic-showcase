@@ -78,7 +78,7 @@ function LightStreaks() {
   );
 }
 
-export function Hero() {
+export function Hero({ ready = false }: { ready?: boolean }) {
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
   const rotX = useTransform(mouseY, [0, 1], [8, -8]);

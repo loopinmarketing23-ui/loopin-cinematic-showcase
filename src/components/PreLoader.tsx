@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import loopinLogo from "@/assets/loopin-logo.png.asset.json";
 
-export function PreLoader() {
+export function PreLoader({ onDone }: { onDone?: () => void }) {
   const [done, setDone] = useState(false);
   const [pct, setPct] = useState(0);
 
