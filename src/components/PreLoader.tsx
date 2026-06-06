@@ -35,7 +35,7 @@ export function PreLoader({ onDone }: { onDone?: () => void }) {
         <motion.div
           className="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center overflow-hidden"
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
+          transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
         >
           <motion.div
             className="absolute inset-0 grid-bg opacity-40"
