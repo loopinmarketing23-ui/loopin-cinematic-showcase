@@ -157,7 +157,9 @@ export function Hero({ ready = false }: { ready?: boolean }) {
 
       {/* Ticker */}
       <motion.div
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.8, duration: 1 }}
+        initial={{ opacity: 0 }}
+        animate={ready ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ delay: 1.2, duration: 1 }}
         className="absolute bottom-10 left-0 right-0 overflow-hidden border-y border-white/5 py-4 bg-black/30 backdrop-blur"
       >
         <div className="flex animate-ticker whitespace-nowrap">
@@ -171,7 +173,9 @@ export function Hero({ ready = false }: { ready?: boolean }) {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4 }}
+        initial={{ opacity: 0 }}
+        animate={ready ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ delay: 1.4, duration: 0.8 }}
         className="absolute bottom-32 left-1/2 -translate-x-1/2 text-xs text-white/40 flex flex-col items-center gap-2"
       >
         <span>SCROLL</span>
