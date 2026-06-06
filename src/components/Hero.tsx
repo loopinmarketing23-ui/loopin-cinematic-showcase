@@ -97,7 +97,7 @@ export function Hero({ ready = false }: { ready?: boolean }) {
 
   const reveal = {
     hidden: { y: "110%" },
-    show: (i: number) => ({ y: "0%", transition: { delay: 2.4 + i * 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] as const } }),
+    show: (i: number) => ({ y: "0%", transition: { delay: 0.3 + i * 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] as const } }),
   };
 
   return (
