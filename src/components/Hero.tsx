@@ -112,8 +112,9 @@ export function Hero({ ready = false }: { ready?: boolean }) {
         style={{ rotateX: rotX, rotateY: rotY, transformPerspective: 1200 }}
       >
         <motion.div
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.3, duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: 0.1, duration: 0.8 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-loopin/30 bg-loopin/5 text-xs uppercase tracking-[0.25em] text-loopin mb-8"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-loopin animate-pulse" />
