@@ -46,13 +46,12 @@ export function Navbar() {
         className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/5"
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 h-20">
-          <button onClick={() => scrollTo("home")} className="flex items-center gap-3 group">
+          <button onClick={() => scrollTo("home")} className="flex items-center group">
             <img
               src={loopinLogo.url}
               alt="Loopin Marketing"
-              className="h-10 w-auto transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(250,204,21,0.35)]"
+              className="h-12 w-auto transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(250,204,21,0.45)]"
             />
-            <span className="text-xl font-medium tracking-tight">Loopin<span className="text-loopin">.</span></span>
           </button>
 
           <ul className="hidden md:flex items-center gap-1">
