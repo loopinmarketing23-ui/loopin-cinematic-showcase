@@ -10,11 +10,18 @@ export function PreLoader({ onDone }: { onDone?: () => void }) {
     let p = 0;
     const id = setInterval(() => {
       p += Math.random() * 18 + 6;
-      if (p >= 100) { p = 100; clearInterval(id); setTimeout(() => setDone(true), 600); }
+      if (p >= 100) {
+        p = 100;
+        clearInterval(id);
+        setTimeout(() => {
+          onDone?.();
+          setDone(true);
+        }, 600);
+      }
       setPct(Math.floor(p));
     }, 140);
     return () => clearInterval(id);
-  }, []);
+  }, [onDone]);
 
   return (
     <AnimatePresence>
