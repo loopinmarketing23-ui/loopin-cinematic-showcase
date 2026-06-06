@@ -78,7 +78,7 @@ function LightStreaks() {
   );
 }
 
-export function Hero() {
+export function Hero({ ready = false }: { ready?: boolean }) {
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
   const rotX = useTransform(mouseY, [0, 1], [8, -8]);
@@ -97,7 +97,7 @@ export function Hero() {
 
   const reveal = {
     hidden: { y: "110%" },
-    show: (i: number) => ({ y: "0%", transition: { delay: 2.4 + i * 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] as const } }),
+    show: (i: number) => ({ y: "0%", transition: { delay: 0.3 + i * 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] as const } }),
   };
 
   return (
@@ -112,8 +112,9 @@ export function Hero() {
         style={{ rotateX: rotX, rotateY: rotY, transformPerspective: 1200 }}
       >
         <motion.div
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.3, duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: 0.1, duration: 0.8 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-loopin/30 bg-loopin/5 text-xs uppercase tracking-[0.25em] text-loopin mb-8"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-loopin animate-pulse" />
@@ -123,7 +124,7 @@ export function Hero() {
         <h1 className="text-[14vw] md:text-[8vw] leading-[0.95] font-light tracking-tight">
           {["We Build Brands", "for the Modern", "Internet"].map((line, i) => (
             <span key={i} className="block overflow-hidden">
-              <motion.span variants={reveal} initial="hidden" animate="show" custom={i} className="block">
+              <motion.span variants={reveal} initial="hidden" animate={ready ? "show" : "hidden"} custom={i} className="block">
                 {i === 2 ? (
                   <span className="italic font-serif text-shimmer">{line}</span>
                 ) : line}
@@ -133,16 +134,18 @@ export function Hero() {
         </h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3.2, duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-10 max-w-2xl mx-auto text-base md:text-lg text-white/60 leading-relaxed"
         >
           Your customers are online. Your brand should be impossible to miss when they get there.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3.5, duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={ready ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: 0.9, duration: 0.8 }}
           className="mt-12 flex flex-col items-center gap-4"
         >
           <MagneticButton onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
@@ -154,7 +157,9 @@ export function Hero() {
 
       {/* Ticker */}
       <motion.div
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.8, duration: 1 }}
+        initial={{ opacity: 0 }}
+        animate={ready ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ delay: 1.2, duration: 1 }}
         className="absolute bottom-10 left-0 right-0 overflow-hidden border-y border-white/5 py-4 bg-black/30 backdrop-blur"
       >
         <div className="flex animate-ticker whitespace-nowrap">
@@ -168,7 +173,9 @@ export function Hero() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4 }}
+        initial={{ opacity: 0 }}
+        animate={ready ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ delay: 1.4, duration: 0.8 }}
         className="absolute bottom-32 left-1/2 -translate-x-1/2 text-xs text-white/40 flex flex-col items-center gap-2"
       >
         <span>SCROLL</span>
