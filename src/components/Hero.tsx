@@ -35,7 +35,7 @@ function MagneticButton({ children, onClick }: { children: React.ReactNode; onCl
 function Particles() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {Array.from({ length: 40 }).map((_, i) => (
+      {Array.from({ length: 18 }).map((_, i) => (
         <motion.span
           key={i}
           className="absolute rounded-full bg-loopin"
@@ -44,11 +44,11 @@ function Particles() {
             height: Math.random() * 3 + 1,
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
-            opacity: Math.random() * 0.7 + 0.1,
+            opacity: Math.random() * 0.35 + 0.05,
           }}
           animate={{
             y: [0, -100, 0],
-            opacity: [0.1, 0.8, 0.1],
+            opacity: [0.05, 0.35, 0.05],
           }}
           transition={{
             duration: Math.random() * 8 + 6,
