@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { SectionTitle } from "./SectionTitle";
 
 const whyPoints = [
-  { title: "Strategy Before Everything", body: "Before we write a single post or run a single ad, we build a strategy around your business, your audience, and your goals — because guesswork is expensive." },
-  { title: "A Specialised Team Behind Every Strategy", body: "You don't get a generalist. You get a dedicated team of specialists in paid ads, content, design, branding, and strategy — each focused on growing your business." },
+  { title: "Strategy Before Everything", body: "Before we write a single post or run a single ad, we build a strategy around your business, your audience, and your goals - because guesswork is expensive." },
+  { title: "A Specialised Team Behind Every Strategy", body: "You don't get a generalist. You get a dedicated team of specialists in paid ads, content, design, branding, and strategy - each focused on growing your business." },
   { title: "Creative With Purpose", body: "Every post, ad, and piece of content we create is designed to do one thing: make the right person stop, pay attention, and take action." },
-  { title: "Results That Actually Matter", body: "We measure what moves your business — visibility, leads, conversions, and customer growth. Not vanity metrics." },
+  { title: "Results That Actually Matter", body: "We measure what moves your business - visibility, leads, conversions, and customer growth. Not vanity metrics." },
 ];
 
 function RevealText({ children, className = "" }: { children: string; className?: string }) {
@@ -13,7 +13,7 @@ function RevealText({ children, className = "" }: { children: string; className?
   return (
     <p className={className}>
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden mr-[0.25em] align-top">
+        <span key={i} className="inline-block overflow-hidden mr-[0.25em] align-bottom leading-[1.6] pb-1">
           <motion.span
             className="inline-block"
             initial={{ y: "100%" }}
@@ -42,7 +42,7 @@ export function About() {
 
         <div className="grid md:grid-cols-12 gap-10 mt-20">
           <div className="md:col-span-7 space-y-6 text-lg leading-relaxed text-white/70">
-            <RevealText>Loopin Marketing was founded with a simple belief: every great business deserves the opportunity to be seen, heard, and remembered.</RevealText>
+            <RevealText>Loopin Marketing was founded with a simple belief; every great business deserves the opportunity to be seen, heard, and remembered.</RevealText>
             <RevealText>In a world where attention is limited and competition is everywhere, businesses need more than just social media posts and advertisements. They need a strategy that helps them stand out, connect with the right audience, and create lasting growth.</RevealText>
             <RevealText>That's why Loopin was started by two people who saw too many great businesses stay invisible, not because they lacked quality, but because they lacked the right strategy to be found.</RevealText>
             <RevealText>We help businesses build strong digital identities through strategy, creative storytelling, and performance marketing. From startups taking their first steps online to established businesses ready to scale, our goal is simple: help brands grow with confidence.</RevealText>

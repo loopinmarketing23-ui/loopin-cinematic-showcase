@@ -34,8 +34,8 @@ function Index() {
       <Navbar />
       <main>
         <Hero ready={ready} />
-        <About />
         <Services />
+        <About />
         <Contact />
       </main>
       <StickyCTA />
