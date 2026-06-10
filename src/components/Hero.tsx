@@ -151,7 +151,6 @@ export function Hero({ ready = false }: { ready?: boolean }) {
           <MagneticButton onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
             Let's Build Your Brand
           </MagneticButton>
-          <span className="text-xs text-white/40 mt-2">Let's make your brand impossible to ignore.</span>
         </motion.div>
       </motion.div>
 
@@ -172,15 +171,6 @@ export function Hero({ ready = false }: { ready?: boolean }) {
         </div>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={ready ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ delay: 1.4, duration: 0.8 }}
-        className="absolute bottom-32 left-1/2 -translate-x-1/2 text-xs text-white/40 flex flex-col items-center gap-2"
-      >
-        <span>SCROLL</span>
-        <motion.div className="w-px h-12 bg-gradient-to-b from-loopin to-transparent" animate={{ scaleY: [0, 1, 0] }} transition={{ duration: 2, repeat: Infinity }} style={{ transformOrigin: "top" }} />
-      </motion.div>
     </section>
   );
 }
