@@ -93,7 +93,7 @@
   0% { background-position: 0 0; }
   100% { background-position: 60px 60px; }
 }
-.animate-ticker { animation: ticker 40s linear infinite; }
+.animate-ticker { animation: ticker 18s linear infinite; }
 .animate-float { animation: float-y 6s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
 

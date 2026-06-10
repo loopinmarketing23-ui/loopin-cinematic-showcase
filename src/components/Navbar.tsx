@@ -4,8 +4,8 @@ import loopinLogo from "@/assets/loopin-logo.png.asset.json";
 
 const links = [
   { label: "Home", id: "home" },
-  { label: "About Us", id: "about" },
   { label: "Services", id: "services" },
+  { label: "About Us", id: "about" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -50,7 +50,7 @@ export function Navbar() {
             <img
               src={loopinLogo.url}
               alt="Loopin Marketing"
-              className="h-12 w-auto transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(250,204,21,0.45)]"
+              className="h-20 md:h-24 w-auto transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(250,204,21,0.45)]"
             />
           </button>
 
