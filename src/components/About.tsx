@@ -13,7 +13,7 @@ function RevealText({ children, className = "" }: { children: string; className?
   return (
     <p className={className}>
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden mr-[0.25em] align-top">
+        <span key={i} className="inline-block overflow-hidden mr-[0.25em] align-bottom leading-[1.6] pb-1">
           <motion.span
             className="inline-block"
             initial={{ y: "100%" }}
