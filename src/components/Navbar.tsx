@@ -45,7 +45,7 @@ export function Navbar() {
         transition={{ delay: 2.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/5"
       >
-        <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 h-20">
+        <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 h-24 md:h-28">
           <button onClick={() => scrollTo("home")} className="flex items-center group">
             <img
               src={loopinLogo.url}
