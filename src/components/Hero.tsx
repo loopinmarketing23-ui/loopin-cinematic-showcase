@@ -64,14 +64,14 @@ function Particles() {
 
 function LightStreaks() {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {Array.from({ length: 5 }).map((_, i) => (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60">
+      {Array.from({ length: 3 }).map((_, i) => (
         <motion.div
           key={i}
-          className="absolute h-px w-64 bg-gradient-to-r from-transparent via-loopin to-transparent"
-          style={{ top: `${15 + i * 18}%` }}
+          className="absolute h-px w-64 bg-gradient-to-r from-transparent via-loopin/50 to-transparent"
+          style={{ top: i === 0 ? "8%" : i === 1 ? "92%" : "96%" }}
           animate={{ x: ["-30%", "130%"] }}
-          transition={{ duration: 8 + i * 2, repeat: Infinity, delay: i * 1.5, ease: "linear" }}
+          transition={{ duration: 10 + i * 2, repeat: Infinity, delay: i * 1.5, ease: "linear" }}
         />
       ))}
     </div>
