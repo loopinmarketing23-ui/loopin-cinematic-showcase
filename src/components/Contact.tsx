@@ -140,10 +140,6 @@ export function Contact() {
                 ✓ Thank you for filling out the form. Our team will get back to you shortly.
               </motion.p>
             )}
-              <span className="relative z-10">{sent ? "✓ Message Sent" : "Send Message"}</span>
-              <span className="relative z-10 transition-transform group-hover:translate-x-1">→</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-loopin-glow to-loopin opacity-0 group-hover:opacity-100 transition-opacity" />
-            </motion.button>
           </motion.form>
 
           {/* Info */}
@@ -156,14 +152,18 @@ export function Contact() {
               <h3 className="text-xs uppercase tracking-[0.3em] text-loopin mb-6">Get In Touch</h3>
               <ul className="space-y-6">
                 {[
-                  { label: "Phone", value: "+91 XXXXX XXXXX" },
-                  { label: "Email", value: "loopinmarketing23@gmail.com" },
+                  { label: "Phone", value: "+91 93617 35234", href: "https://wa.me/919361735234" },
+                  { label: "Email", value: "loopinmarketing23@gmail.com", href: "mailto:loopinmarketing23@gmail.com" },
                   { label: "Location", value: "Chennai, Tamil Nadu, India" },
                   { label: "Business Hours", value: "Monday – Saturday\n9:00 AM – 6:00 PM" },
                 ].map(item => (
                   <li key={item.label}>
                     <div className="text-xs uppercase tracking-wider text-white/40 mb-1">{item.label}</div>
-                    <div className="text-lg text-white whitespace-pre-line hover:text-loopin transition-colors">{item.value}</div>
+                    {item.href ? (
+                      <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="text-lg text-white whitespace-pre-line hover:text-loopin transition-colors">{item.value}</a>
+                    ) : (
+                      <div className="text-lg text-white whitespace-pre-line">{item.value}</div>
+                    )}
                   </li>
                 ))}
               </ul>
