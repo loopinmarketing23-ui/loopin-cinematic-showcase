@@ -57,7 +57,8 @@ export function Contact() {
     ].join("\n");
     window.location.href = `mailto:loopinmarketing23@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
-    setTimeout(() => setSent(false), 4000);
+    setForm({ name: "", business: "", email: "", phone: "", service: "", message: "" });
+    setTimeout(() => setSent(false), 8000);
   };
 
   const socials = [
@@ -125,6 +126,20 @@ export function Contact() {
               whileTap={{ scale: 0.98 }}
               className="group relative w-full md:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-loopin text-black font-semibold overflow-hidden"
             >
+              <span className="relative z-10">Send Message</span>
+              <span className="relative z-10 transition-transform group-hover:translate-x-1">→</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-loopin-glow to-loopin opacity-0 group-hover:opacity-100 transition-opacity" />
+            </motion.button>
+
+            {sent && (
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-loopin text-base mt-2"
+              >
+                ✓ Thank you for filling out the form. Our team will get back to you shortly.
+              </motion.p>
+            )}
               <span className="relative z-10">{sent ? "✓ Message Sent" : "Send Message"}</span>
               <span className="relative z-10 transition-transform group-hover:translate-x-1">→</span>
               <span className="absolute inset-0 bg-gradient-to-r from-loopin-glow to-loopin opacity-0 group-hover:opacity-100 transition-opacity" />
