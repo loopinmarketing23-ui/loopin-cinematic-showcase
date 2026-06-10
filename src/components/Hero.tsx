@@ -121,7 +121,7 @@ export function Hero({ ready = false }: { ready?: boolean }) {
           Loopin Marketing
         </motion.div>
 
-        <h1 className="text-[14vw] md:text-[8vw] leading-[0.95] font-light tracking-tight">
+        <h1 className="text-[12vw] md:text-[7.5vw] leading-[0.95] font-light tracking-tight">
           {["We Build Brands", "for the Modern", "Internet"].map((line, i) => (
             <span key={i} className="block overflow-hidden">
               <motion.span variants={reveal} initial="hidden" animate={ready ? "show" : "hidden"} custom={i} className="block">
