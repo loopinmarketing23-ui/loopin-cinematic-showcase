@@ -57,7 +57,8 @@ export function Contact() {
     ].join("\n");
     window.location.href = `mailto:loopinmarketing23@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
-    setTimeout(() => setSent(false), 4000);
+    setForm({ name: "", business: "", email: "", phone: "", service: "", message: "" });
+    setTimeout(() => setSent(false), 8000);
   };
 
   const socials = [
@@ -125,10 +126,20 @@ export function Contact() {
               whileTap={{ scale: 0.98 }}
               className="group relative w-full md:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-loopin text-black font-semibold overflow-hidden"
             >
-              <span className="relative z-10">{sent ? "✓ Message Sent" : "Send Message"}</span>
+              <span className="relative z-10">Send Message</span>
               <span className="relative z-10 transition-transform group-hover:translate-x-1">→</span>
               <span className="absolute inset-0 bg-gradient-to-r from-loopin-glow to-loopin opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.button>
+
+            {sent && (
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-loopin text-base mt-2"
+              >
+                ✓ Thank you for filling out the form. Our team will get back to you shortly.
+              </motion.p>
+            )}
           </motion.form>
 
           {/* Info */}
@@ -141,21 +152,25 @@ export function Contact() {
               <h3 className="text-xs uppercase tracking-[0.3em] text-loopin mb-6">Get In Touch</h3>
               <ul className="space-y-6">
                 {[
-                  { label: "Phone", value: "+91 XXXXX XXXXX" },
-                  { label: "Email", value: "loopinmarketing23@gmail.com" },
+                  { label: "Phone", value: "+91 93617 35234", href: "https://wa.me/919361735234" },
+                  { label: "Email", value: "loopinmarketing23@gmail.com", href: "mailto:loopinmarketing23@gmail.com" },
                   { label: "Location", value: "Chennai, Tamil Nadu, India" },
                   { label: "Business Hours", value: "Monday – Saturday\n9:00 AM – 6:00 PM" },
                 ].map(item => (
                   <li key={item.label}>
                     <div className="text-xs uppercase tracking-wider text-white/40 mb-1">{item.label}</div>
-                    <div className="text-lg text-white whitespace-pre-line hover:text-loopin transition-colors">{item.value}</div>
+                    {item.href ? (
+                      <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="text-lg text-white whitespace-pre-line hover:text-loopin transition-colors">{item.value}</a>
+                    ) : (
+                      <div className="text-lg text-white whitespace-pre-line">{item.value}</div>
+                    )}
                   </li>
                 ))}
               </ul>
             </div>
 
             <a
-              href="https://wa.me/91"
+              href="https://wa.me/919361735234"
               target="_blank" rel="noreferrer"
               className="block glass rounded-3xl p-8 group hover:border-loopin/60 transition-all"
             >
@@ -190,22 +205,6 @@ export function Contact() {
           </motion.div>
         </div>
 
-        {/* Final CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="mt-32 text-center max-w-4xl mx-auto"
-        >
-          <h3 className="text-4xl md:text-6xl font-light">Ready to <span className="italic font-serif text-shimmer">Grow</span> Your Business?</h3>
-          <p className="mt-6 text-white/60 text-lg">Whether you need more visibility, more leads, or a stronger brand presence, we're here to help.</p>
-          <p className="mt-4 text-xl md:text-2xl italic font-serif text-white/90">Your next stage of growth starts with one conversation. Let's have it.</p>
-          <button
-            onClick={() => document.querySelector<HTMLInputElement>('input[type="text"]')?.focus()}
-            className="mt-10 inline-flex items-center gap-3 px-10 py-5 rounded-full bg-loopin text-black font-semibold hover:scale-105 transition-transform animate-pulse-glow"
-          >
-            Get in Touch <span>→</span>
-          </button>
-        </motion.div>
       </div>
 
       <footer className="mt-32 border-t border-white/5 pt-10 pb-8 text-center text-sm text-white/40">

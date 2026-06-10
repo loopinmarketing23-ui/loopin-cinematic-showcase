@@ -2,14 +2,10 @@ import { motion } from "motion/react";
 import { SectionTitle } from "./SectionTitle";
 
 const whyPoints = [
-  { title: "Strategy Before Everything", body: "Before we write a single post or run a single ad, we build a strategy around your business, your audience, and your goals because guesswork is expensive." },
-  { title: "A Specialized Team Behind Every Strategy", body: "You don't get a generalist. You get a dedicated team of specialists in paid ads, content, design, branding, and strategy - each focused on one thing: growing your business." },
-  { title: "Creative with Purpose", body: "Every post, ad, and piece of content we create is designed to do one thing: make the right person stop, pay attention, and take action." },
-  { title: "Results That Matter", body: "We measure what actually moves your business - visibility, leads, conversions, and customer growth. Not vanity metrics." },
-  { title: "End-to-End Marketing Solutions", body: "From social media and advertising to branding and websites, we provide everything your business needs under one roof." },
-  { title: "A Partner, Not Just a Service Provider", body: "We treat your business goals as our own. Your growth is our success, and we're invested in helping you get there." },
-  { title: "Built for Businesses That Want to Scale", body: "Whether you're a startup finding your footing or an established business looking to grow, our strategies are built to support your next stage of growth." },
-  { title: "Future-Focused Vision", body: "When you work with Loopin, you're partnering with a brand that believes in building long-term value, strong relationships, and lasting impact." },
+  { title: "Strategy Before Everything", body: "Before we write a single post or run a single ad, we build a strategy around your business, your audience, and your goals — because guesswork is expensive." },
+  { title: "A Specialised Team Behind Every Strategy", body: "You don't get a generalist. You get a dedicated team of specialists in paid ads, content, design, branding, and strategy — each focused on growing your business." },
+  { title: "Creative With Purpose", body: "Every post, ad, and piece of content we create is designed to do one thing: make the right person stop, pay attention, and take action." },
+  { title: "Results That Actually Matter", body: "We measure what moves your business — visibility, leads, conversions, and customer growth. Not vanity metrics." },
 ];
 
 function RevealText({ children, className = "" }: { children: string; className?: string }) {
@@ -120,28 +116,6 @@ export function About() {
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mt-24 text-center"
-          >
-            <p className="text-2xl md:text-4xl font-light italic font-serif text-white/90 max-w-3xl mx-auto">
-              If you're ready to grow, we're ready to build with you.
-            </p>
-            <div className="mt-10 space-y-3 text-lg text-white/60">
-              <p>Your business deserves more than visibility.</p>
-              <p>It deserves a strategy that creates growth, builds trust, and drives lasting impact.</p>
-              <p>Whether you're just getting started or ready to scale, Loopin is here to help you take the next step.</p>
-              <p className="text-white text-xl pt-2">Let's build something people remember.</p>
-            </div>
-            <button
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="mt-10 inline-flex items-center gap-3 px-8 py-4 rounded-full bg-loopin text-black font-semibold hover:scale-105 transition-transform"
-            >
-              Get Started Today <span>→</span>
-            </button>
-          </motion.div>
         </div>
       </div>
     </section>

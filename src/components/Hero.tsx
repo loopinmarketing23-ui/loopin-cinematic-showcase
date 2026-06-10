@@ -35,7 +35,7 @@ function MagneticButton({ children, onClick }: { children: React.ReactNode; onCl
 function Particles() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {Array.from({ length: 40 }).map((_, i) => (
+      {Array.from({ length: 18 }).map((_, i) => (
         <motion.span
           key={i}
           className="absolute rounded-full bg-loopin"
@@ -44,11 +44,11 @@ function Particles() {
             height: Math.random() * 3 + 1,
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
-            opacity: Math.random() * 0.7 + 0.1,
+            opacity: Math.random() * 0.35 + 0.05,
           }}
           animate={{
             y: [0, -100, 0],
-            opacity: [0.1, 0.8, 0.1],
+            opacity: [0.05, 0.35, 0.05],
           }}
           transition={{
             duration: Math.random() * 8 + 6,
@@ -64,14 +64,14 @@ function Particles() {
 
 function LightStreaks() {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {Array.from({ length: 5 }).map((_, i) => (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60">
+      {Array.from({ length: 3 }).map((_, i) => (
         <motion.div
           key={i}
-          className="absolute h-px w-64 bg-gradient-to-r from-transparent via-loopin to-transparent"
-          style={{ top: `${15 + i * 18}%` }}
+          className="absolute h-px w-64 bg-gradient-to-r from-transparent via-loopin/50 to-transparent"
+          style={{ top: i === 0 ? "8%" : i === 1 ? "92%" : "96%" }}
           animate={{ x: ["-30%", "130%"] }}
-          transition={{ duration: 8 + i * 2, repeat: Infinity, delay: i * 1.5, ease: "linear" }}
+          transition={{ duration: 10 + i * 2, repeat: Infinity, delay: i * 1.5, ease: "linear" }}
         />
       ))}
     </div>
@@ -121,7 +121,7 @@ export function Hero({ ready = false }: { ready?: boolean }) {
           Loopin Marketing
         </motion.div>
 
-        <h1 className="text-[14vw] md:text-[8vw] leading-[0.95] font-light tracking-tight">
+        <h1 className="text-[12vw] md:text-[7.5vw] leading-[0.95] font-light tracking-tight">
           {["We Build Brands", "for the Modern", "Internet"].map((line, i) => (
             <span key={i} className="block overflow-hidden">
               <motion.span variants={reveal} initial="hidden" animate={ready ? "show" : "hidden"} custom={i} className="block">

@@ -4,8 +4,8 @@ import loopinLogo from "@/assets/loopin-logo.png.asset.json";
 
 const links = [
   { label: "Home", id: "home" },
-  { label: "About Us", id: "about" },
   { label: "Services", id: "services" },
+  { label: "About Us", id: "about" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -45,12 +45,12 @@ export function Navbar() {
         transition={{ delay: 2.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/5"
       >
-        <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 h-20">
+        <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 h-24 md:h-28">
           <button onClick={() => scrollTo("home")} className="flex items-center group">
             <img
               src={loopinLogo.url}
               alt="Loopin Marketing"
-              className="h-12 w-auto transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(250,204,21,0.45)]"
+              className="h-20 md:h-24 w-auto transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(250,204,21,0.45)]"
             />
           </button>
 
