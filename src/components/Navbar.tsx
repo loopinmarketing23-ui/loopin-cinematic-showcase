@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useState } from "react";
-import loopinLogo from "@/assets/loopin-logo.png.asset.json";
+const loopinLogo = { url: "/loopin-logo.png" };
 
 const links = [
   { label: "Home", id: "home" },
