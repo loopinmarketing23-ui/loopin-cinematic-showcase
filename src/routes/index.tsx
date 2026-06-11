@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Sharp advertising, creative storytelling, and strategies built for real growth." },
     ],
     links: [
-      { rel: "preload", as: "image", href: loopinLogo.url, fetchpriority: "high" },
+      { rel: "preload", as: "image", href: loopinLogo.url, fetchPriority: "high" },
     ],
   }),
   component: Index,
