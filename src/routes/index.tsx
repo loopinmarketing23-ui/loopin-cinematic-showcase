@@ -8,7 +8,7 @@ import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
 import { Cursor } from "@/components/Cursor";
 import { StickyCTA } from "@/components/StickyCTA";
-import loopinLogo from "@/assets/loopin-logo.png.asset.json";
+const loopinLogo = { url: "/loopin-logo.png" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
