@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
-import loopinLogo from "@/assets/loopin-logo.png.asset.json";
+const loopinLogo = { url: "/loopin-logo.png" };
 
 export function PreLoader({ onDone }: { onDone?: () => void }) {
   const seen = typeof window !== "undefined" && sessionStorage.getItem("loopin_seen") === "1";
